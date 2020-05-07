@@ -9,7 +9,7 @@
 [在线地址](http://zhikume.cn/firendcircle)
 
 ## 部分截图
-<img src="./1.png">
+<img src="./1.png" width=280>
 <img src="./2.png" width=280>
 
 ## 技术交流与反馈
