@@ -1,0 +1,21 @@
+
+.normal {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Georgia, sans-serif;
+  text-align: center;
+}
+
+.content {
+  position: relative;
+  flex: 1;
+  overflow: scroll;
+}
+
+.footer {
+  line-height: 3em;
+  font-size: 12px;
+  background-color: #fff;
+  box-shadow: -10px 0 18px rgba(0,0,0, .2);
+}
