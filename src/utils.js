@@ -46,8 +46,6 @@ const previewURL = ''
 
 const pid = '516c80c3-ae19-4eaf-923b-a1e902493183'
 
-console.log(process.env.NODE_ENV)
-
 export {
   uuid,
   req,

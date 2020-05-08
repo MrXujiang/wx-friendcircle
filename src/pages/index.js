@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { Button } from 'antd-mobile';
 import RcViewer from '@hanyk/rc-viewer';
 import LazyLoad from 'react-lazy-load';
 import router from 'umi/router';
@@ -83,7 +82,7 @@ function FriendCircle(props) {
   useEffect(() => {
     req.get(`/form/get?id=${pid}&types=all`).then(res => {
       if(res.result.list) {
-        setList(res.result.list)
+        setList(res.result.list.reverse())
       }
     })
   }, [])

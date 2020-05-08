@@ -2,6 +2,7 @@ import path from 'path';
 // ref: https://umijs.org/config/
 export default {
   treeShaking: true,
+  outputPath: './friend',
   publicPath: '/friend/',
   base: '/friendcircle',
   routes: [
