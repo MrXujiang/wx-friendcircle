@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Button, Icon, TextareaItem, ImagePicker, InputItem, Toast } from 'antd-mobile';
 import router from 'umi/router';
-import { req, pid } from 'utils';
+import { req, pid, uuid } from 'utils';
 import styles from './edit.less';
 
 const map = {
@@ -35,7 +35,7 @@ function Edit(props) {
     form[type] = v
   }
   const onSubmit = async () => {
-    Toast.loading('正在上传中...', 5);
+    Toast.loading('正在上传中...', 3);
     if(form.think.length < 2) {
       Toast.fail('想法至少要说2个字哦~', 2);
       return
@@ -60,7 +60,10 @@ function Edit(props) {
       }
     }
 
-    req.post(`/form/save`, {fid: pid, formData: transformO2T(form, map)})
+    let data = transformO2T(form, map);
+    data.uid = uuid(6)
+
+    req.post(`/form/save`, {fid: pid, formData: data})
       .then(res => {
         router.push('/')
       }).catch(err => {

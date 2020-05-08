@@ -3,7 +3,6 @@ import styles from './index.css';
 
 
 function BasicLayout(props) {
-  console.log(props)
   let { pathname } = props.location
   let isShowLayout = ['', '/'].indexOf(pathname) > -1
   return isShowLayout ? (
